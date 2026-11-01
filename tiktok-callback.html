@@ -1,0 +1,9 @@
+<!doctype html><html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>TikTok 연결</title>
+<style>body{font-family:system-ui,sans-serif;max-width:640px;margin:40px auto;padding:0 16px;line-height:1.7;color:#333;background:#fafbff}code{display:block;word-break:break-all;background:#eef;padding:12px;border-radius:8px}</style></head>
+<body><h1>TikTok 연결</h1><div id="o"></div>
+<script>
+var p=new URLSearchParams(location.search),o=document.getElementById('o');
+if(p.get('code')){o.innerHTML='<p>허용 완료! 아래 코드를 복사해서 Claude에게 보내 주세요. (몇 분 안에 써야 해요)</p><code></code>';o.querySelector('code').textContent=p.get('code');}
+else if(p.get('error')){o.textContent='오류: '+p.get('error')+' '+(p.get('error_description')||'');}
+else{o.textContent='yuha-uploader TikTok 연결용 페이지입니다.';}
+</script></body></html>
